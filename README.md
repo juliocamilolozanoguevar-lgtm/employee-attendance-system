@@ -1,8 +1,7 @@
 ## TRELLO
 
 
-# Sistema de Préstamos Gota a Gota
-
+# Sistema de .......
 
 ## Descripcion del negocio
 
@@ -25,11 +24,6 @@
  
 ## Estructura del proyecto
  
-```
-
-```
- 
----
 
 ### DIAGRAMA DE FIGMA UI/UX
 
