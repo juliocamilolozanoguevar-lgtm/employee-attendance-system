@@ -9,8 +9,12 @@ require_once 'config/config.php';
     <title><?php echo TITLE_BUSINESS; ?></title>
 </head>
 <body>
-    <h2>eso queso
-
-    </h2>
+    <form action="#">
+        <label for="username">Usuario:</label>
+        <input id="user" type="text" required>
+        <label for="pass">contraseña</label> 
+        <input id="pass" type="password">
+        <button type="button">Enviar</button>
+    </form>
 </body>
 </html>
