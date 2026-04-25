@@ -1,2 +1,2 @@
-<h1>Hola</h1>
-<h2>Mundo</h2>
+<?php
+header("location: views/auth/login.php");
