@@ -9,6 +9,8 @@ require_once 'config/config.php';
     <title><?php echo TITLE_BUSINESS; ?></title>
 </head>
 <body>
-    
+    <h2>eso queso
+
+    </h2>
 </body>
 </html>
