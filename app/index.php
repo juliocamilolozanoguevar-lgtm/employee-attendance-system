@@ -1,2 +1,2 @@
 <?php
-header("location: views/auth/login.php");
+header("location: app/views/auth/login.php");
