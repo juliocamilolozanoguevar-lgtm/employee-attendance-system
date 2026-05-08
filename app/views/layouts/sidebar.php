@@ -25,7 +25,8 @@
     <div class="sidebar-logo"><?php echo htmlspecialchars($usuario['nombre_usuario'] ?? 'Usuario'); ?></div>
     <ul>
         <li>
-            <a href="<?php echo BASE_URL;?>/empleados" class="activo" data-page="home">
+            <a href="<?php echo BASE_URL;?>/dashboard" 
+                class="<?php echo "activo"; ?>" data-page="home">
                 <i class="fa-solid fa-house"></i>
                 <span>Inicio</span>
             </a>
