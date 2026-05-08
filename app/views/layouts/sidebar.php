@@ -1,3 +1,10 @@
+<!-- El archivo .htacces tiene este RewriteRule ^(.+)$ app/index.php?url=$1 [QSA,L] -->
+ <!-- Detectamos en qué página estamos para marcar el link activo del sidebar (inici,producto,....-->
+
+ <?php
+ $rutaActual = explode('/', trim($_GET['url']) ?? 'dashboard' )
+ ?>
+
 <!-- TOPBAR (solo visible en móvil) -->
 <div class="topbar">
     <div class="title-business">
