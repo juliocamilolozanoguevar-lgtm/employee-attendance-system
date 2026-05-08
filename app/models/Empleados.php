@@ -15,5 +15,6 @@ class empleado{
         // Al guardarla en $this->db, cualquier método de esta clase puede usarla.
         $this->db = Database::getConnection();
     }
-
+    //creamos el modulo para llamar todos los datos de la tabla EMPLEADOS
+    public function 
 }
