@@ -4,14 +4,12 @@ require_once __DIR__ . '/../models/Empleado.php';
 
 // Controlador para el módulo de empleados.
 class EmpleadosController extends Controller {
-
-   
-    // Método por defecto. 
+     // Método por defecto. 
     public function index(): void {
          // Instanciamos el objeto de la clase empleados
-    $modelo = new Empleado(),
+    $modelo = new Empleado();
     $variable_empleados = $modelo->getAll();
-        $this->view('empleados/reportes',[
+    $this->view('empleados/reportes',[
             'usuario' => $_SESSION['usuario'],
             'empleados' => $variable_empleados
         ]);
