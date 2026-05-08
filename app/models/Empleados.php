@@ -16,5 +16,9 @@ class empleado{
         $this->db = Database::getConnection();
     }
     //creamos el modulo para llamar todos los datos de la tabla EMPLEADOS
-    public function 
+    //public function obtenerTodo():array
+    public function getAll():array {
+        // Variable $sql para almacenar
+        $sql = "SELECT * FROM empleado";
+    }
 }
