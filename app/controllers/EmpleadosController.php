@@ -1,6 +1,6 @@
 <?php
 require_once __DIR__ . '/../core/Controller.php';
-require_once __DIR__ . '/../core/Empleado.php';
+require_once __DIR__ . '/../models/Empleado.php';
 
 // Controlador para el módulo de empleados.
 class EmpleadosController extends Controller {
