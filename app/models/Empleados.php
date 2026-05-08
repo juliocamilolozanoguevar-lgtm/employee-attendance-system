@@ -20,5 +20,7 @@ class empleado{
     public function getAll():array {
         // Variable $sql para almacenar
         $sql = "SELECT * FROM empleado";
+        // statement = declaracion 
+        $stmt = $this->db->prepare($sql);
     }
 }
