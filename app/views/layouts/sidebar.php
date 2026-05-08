@@ -25,13 +25,13 @@
     <div class="sidebar-logo"><?php echo htmlspecialchars($usuario['nombre_usuario'] ?? 'Usuario'); ?></div>
     <ul>
         <li>
-            <a href="#" class="activo" data-page="home">
+            <a href="<?php echo BASE_URL;?>/empleados" class="activo" data-page="home">
                 <i class="fa-solid fa-house"></i>
                 <span>Inicio</span>
             </a>
         </li>
         <li>
-            <a href="#" data-page="reportes">
+            <a href="<?php echo BASE_URL;?>/empleados" data-page="reportes">
                 <i class="fa-solid fa-clipboard-list"></i>
                 <span>Reportes</span>
             </a>
