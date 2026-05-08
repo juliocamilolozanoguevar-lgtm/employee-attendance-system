@@ -6,7 +6,7 @@ require_once __DIR__ . '/../core/Database.php';
 class empleado{
      // La propiedad $db guardará la conexión PDO.
     // Le decimos que solo puede ser de tipo PDO (tipado estricto).
-    // "private" significa que solo se puede usar dentro de esta clase.
+    // modificador de acceso ("private") significa que solo se puede usar dentro de esta clase.
     private PDO $db;
 
     //Al crear el modelo, obtenemos la conexion automaticamente.
