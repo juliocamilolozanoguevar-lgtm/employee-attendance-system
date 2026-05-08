@@ -25,5 +25,6 @@ class empleado{
         // Ejecutamos la declaracion ($stmt)
         $stmt->execute();
         // Retornamos los datos
+        return $stmt->fetchAll();
     }
 }

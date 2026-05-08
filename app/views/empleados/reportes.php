@@ -24,6 +24,7 @@
     </nav>
     <div class="main-content">
         <div class="table-responsive">
+            <?php print_R($empleados)?>
         </div>
     </div>
 </main>
