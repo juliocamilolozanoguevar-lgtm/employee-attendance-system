@@ -1,8 +1,7 @@
-<!-- El archivo .htacces tiene este RewriteRule ^(.+)$ app/index.php?url=$1 [QSA,L] -->
- <!-- Detectamos en qué página estamos para marcar el link activo del sidebar (inici,producto,....-->
-
- <?php
- $rutaActual = explode('/', trim($_GET['url'] ?? 'dashboard', '/' ))[0] ?: 'dashboard';
+<!--El archivo .htacces tiene este linea RewriteRule ^(.+)$ app/index.php?url=$1 [QSA,L] -->
+<!--Detectamos en qué pagina estamos para marcar el link activo del siderbar(inicio,producto,...)-->
+ <?php 
+    $rutaActual = explode('/', trim($_GET['url'] ?? 'dashboard', '/'))[0] ?: 'dashboard';
  ?>
 
 <!-- TOPBAR (solo visible en móvil) -->
@@ -25,15 +24,15 @@
     <div class="sidebar-logo"><?php echo htmlspecialchars($usuario['nombre_usuario'] ?? 'Usuario'); ?></div>
     <ul>
         <li>
-            <a href="<?php echo BASE_URL;?>/dashboard" 
-                class="<?php echo $rutaActual === 'dashboard' ? "activo": ""; ?" 
+            <a href="<?php echo BASE_URL; ?>/dashboard" 
+                class="<?php echo $rutaActual === 'dashboard' ? "activo" : ""; ?>" 
                 <i class="fa-solid fa-house"></i>
                 <span>Inicio</span>
             </a>
         </li>
         <li>
-            <a href="<?php echo BASE_URL;?>/empleados" 
-                class="<?php echo $rutaActual === 'empleados' ? "activo": ""; ?>"
+            <a href="<?php echo BASE_URL; ?>/empleados" 
+                class="<?php echo $rutaActual === 'empleados' ? "activo" : ""; ?>" 
                 <i class="fa-solid fa-clipboard-list"></i>
                 <span>Reportes</span>
             </a>
