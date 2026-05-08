@@ -2,7 +2,7 @@
  <!-- Detectamos en qué página estamos para marcar el link activo del sidebar (inici,producto,....-->
 
  <?php
- $rutaActual = explode('/', trim($_GET['url']) ?? 'dashboard' )
+ $rutaActual = explode('/', trim($_GET['url'] ?? 'dashboard', '/' ))[0] ?: 'dashboard';
  ?>
 
 <!-- TOPBAR (solo visible en móvil) -->
