@@ -6,7 +6,9 @@ class EmpleadosController extends Controller {
 
     // Método por defecto. 
     public function index(): void {
-        $this->view('empleados/reportes');
+        $this->view('empleados/reportes',[
+            'usuario' => $_SESSION['usuario']
+        ]);
     }
 
 
