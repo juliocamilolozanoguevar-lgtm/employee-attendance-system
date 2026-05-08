@@ -22,5 +22,8 @@ class empleado{
         $sql = "SELECT * FROM empleado";
         // statement = declaracion 
         $stmt = $this->db->prepare($sql);
+        // Ejecutamos la declaracion ($stmt)
+        $stmt->execute();
+        // Retornamos los datos
     }
 }
