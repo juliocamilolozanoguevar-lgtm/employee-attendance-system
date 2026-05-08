@@ -16,7 +16,7 @@
 <!-- CONTENIDO PRINCIPAL -->
 <main>
     <nav class="breadcrumb">
-        <span>Dashaboard</span>
+        <span>Dashboard</span>
         <i class="fa-solid fa-chevron-right"></i>
         <span id="breadcrumb-page">Empleados</span>
     </nav>
