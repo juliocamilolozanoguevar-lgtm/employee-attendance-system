@@ -8,7 +8,12 @@ class EmpleadosController extends Controller {
     public function index(): void {
 
     // Mientras no se inicie sesión - que se envie o redirija al login
-    
+        if(isset($_SESSION['usuario'])){
+            echo "Usuario Existe";
+            exit()
+        } else {
+            header("location: " . BASE_URL ./"login");
+        }
          // Instanciamos el objeto de la clase empleados
     $modelo = new Empleado();
     $variable_empleados = $modelo->getAll();
