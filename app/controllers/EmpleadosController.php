@@ -6,6 +6,9 @@ require_once __DIR__ . '/../models/Empleado.php';
 class EmpleadosController extends Controller {
      // Método por defecto. 
     public function index(): void {
+
+    // Mientras no se inicie sesión - que se envie o redirija al login
+    
          // Instanciamos el objeto de la clase empleados
     $modelo = new Empleado();
     $variable_empleados = $modelo->getAll();
