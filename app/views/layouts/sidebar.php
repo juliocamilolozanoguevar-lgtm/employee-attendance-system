@@ -38,16 +38,10 @@
                 class="nav-toggle <?php echo $reportesAbierto ? 'activo' : ''; ?>"
                 aria-expanded="<?php echo $reportesAbierto ? 'true' : 'false'; ?>">
                 <i class="fa-solid fa-clipboard-list"></i>
-                <span>Reportes</span>
+                <span>Empleados</span>
                 <i class="fa-solid fa-chevron-down nav-chevron"></i>
             </button>
             <ul class="submenu">
-                <li>
-                    <a href="<?php echo BASE_URL; ?>/empleados"
-                        class="<?php echo $rutaActual === 'empleados' && $accionActual === 'index' ? 'activo' : ''; ?>">
-                        <span>Empleados</span>
-                    </a>
-                </li>
                 <li>
                     <a href="<?php echo BASE_URL; ?>/empleados/reportes"
                         class="<?php echo $rutaActual === 'empleados' && $accionActual === 'reportes' ? 'activo' : ''; ?>">
