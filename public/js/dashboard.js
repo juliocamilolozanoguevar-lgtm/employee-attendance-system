@@ -14,11 +14,21 @@ document.addEventListener("DOMContentLoaded", () => {
         overlay.classList.remove("show");
     }
 
-    hamburger.addEventListener("click", openSidebar);
-    overlay.addEventListener("click", closeSidebar);
+    if (hamburger && sidebar && overlay) {
+        hamburger.addEventListener("click", openSidebar);
+        overlay.addEventListener("click", closeSidebar);
+    }
+
+    document.querySelectorAll(".nav-toggle").forEach((toggle) => {
+        toggle.addEventListener("click", () => {
+            const group = toggle.closest(".nav-group");
+            const isOpen = group.classList.toggle("open");
+            toggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+    });
 
     //  Cerrar sesión
-    document.getElementById("btn-logout").addEventListener("click", (e) => {
+    document.getElementById("btn-logout")?.addEventListener("click", (e) => {
         e.preventDefault();
         if (confirm("¿Seguro que deseas cerrar sesión?")) {
             // Redirigimos a la URL que tiene el href del botón (/logout)

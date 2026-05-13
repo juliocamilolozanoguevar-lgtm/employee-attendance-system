@@ -115,34 +115,83 @@ body {
     padding: 0 10px;
 }
 
-.sidebar ul li a {
+.sidebar ul li a,
+.nav-toggle {
     display: flex;
     align-items: center;
     gap: 12px;
+    width: 100%;
     padding: 11px 14px;
     text-decoration: none;
     color: var(--muted);
     font-size: 0.875rem;
     font-weight: 500;
     border-radius: 8px;
+    border: 0;
+    background: transparent;
+    font-family: inherit;
+    cursor: pointer;
     transition: background 0.2s, color 0.2s;
 }
 
-.sidebar ul li a i {
+.sidebar ul li a i,
+.nav-toggle i {
     font-size: 1rem;
     width: 18px;
     text-align: center;
 }
 
-.sidebar ul li a:hover {
+.sidebar ul li a:hover,
+.nav-toggle:hover {
     background-color: var(--bg);
     color: var(--text);
 }
 
-.sidebar ul li a.activo {
+.sidebar ul li a.activo,
+.nav-toggle.activo {
     background-color: #eeeeee;
     color: var(--text);
     font-weight: 600;
+}
+
+.nav-toggle span {
+    flex: 1;
+    text-align: left;
+}
+
+.nav-chevron {
+    margin-left: auto;
+    transition: transform 0.2s ease;
+}
+
+.nav-group.open .nav-chevron {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    display: none !important;
+    flex: initial !important;
+    gap: 6px !important;
+    margin-top: 6px;
+    padding: 0 0 0 34px !important;
+}
+
+.nav-group.open .submenu {
+    display: flex !important;
+}
+
+.submenu a {
+    min-height: 40px;
+    padding: 8px 12px !important;
+    color: var(--text) !important;
+    background-color: #f4f4f4;
+    border: 1px solid transparent;
+}
+
+.submenu a:hover,
+.submenu a.activo {
+    background-color: #ffffff !important;
+    border-color: var(--sidebar-line);
 }
 
 /* logout al fondo */

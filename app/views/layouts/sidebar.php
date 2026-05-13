@@ -1,7 +1,10 @@
 <!--El archivo .htacces tiene este linea RewriteRule ^(.+)$ app/index.php?url=$1 [QSA,L] -->
 <!--Detectamos en qué pagina estamos para marcar el link activo del siderbar(inicio,producto,...)-->
- <?php 
-    $rutaActual = explode('/', trim($_GET['url'] ?? 'dashboard', '/'))[0] ?: 'dashboard';
+ <?php
+    $partesRuta = explode('/', trim($_GET['url'] ?? 'dashboard', '/'));
+    $rutaActual = $partesRuta[0] ?: 'dashboard';
+    $accionActual = $partesRuta[1] ?? 'index';
+    $reportesAbierto = $rutaActual === 'empleados';
  ?>
 
 <!-- TOPBAR (solo visible en móvil) -->
@@ -30,12 +33,34 @@
                 <span>Inicio</span>
             </a>
         </li>
-        <li>
-            <a href="<?php echo BASE_URL; ?>/empleados"
-                class="<?php echo $rutaActual === 'empleados' ? 'activo' : ''; ?>"> 
+        <li class="nav-group <?php echo $reportesAbierto ? 'open' : ''; ?>">
+            <button type="button"
+                class="nav-toggle <?php echo $reportesAbierto ? 'activo' : ''; ?>"
+                aria-expanded="<?php echo $reportesAbierto ? 'true' : 'false'; ?>">
                 <i class="fa-solid fa-clipboard-list"></i>
                 <span>Reportes</span>
-            </a>
+                <i class="fa-solid fa-chevron-down nav-chevron"></i>
+            </button>
+            <ul class="submenu">
+                <li>
+                    <a href="<?php echo BASE_URL; ?>/empleados"
+                        class="<?php echo $rutaActual === 'empleados' && $accionActual === 'index' ? 'activo' : ''; ?>">
+                        <span>Empleados</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo BASE_URL; ?>/empleados/reportes"
+                        class="<?php echo $rutaActual === 'empleados' && $accionActual === 'reportes' ? 'activo' : ''; ?>">
+                        <span>Reportes</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo BASE_URL; ?>/empleados/registro"
+                        class="<?php echo $rutaActual === 'empleados' && $accionActual === 'registro' ? 'activo' : ''; ?>">
+                        <span>Registro</span>
+                    </a>
+                </li>
+            </ul>
         </li>
         <li class="nav-logout">
             <a href="<?php echo BASE_URL; ?>/logout" id="btn-logout">
